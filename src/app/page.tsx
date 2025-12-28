@@ -30,7 +30,7 @@ export default function Home() {
       <PageHeader />
       <main className="flex-1 container mx-auto px-4 py-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Card className="lg:col-span-2_ md:col-span-2_ col-span-1 flex flex-col items-center justify-center text-center p-8 bg-card shadow-lg border-primary/20">
+          <Card className="lg:col-span-2 md:col-span-2 col-span-1 flex flex-col items-center justify-center text-center p-8 bg-card shadow-lg border-primary/20">
             <CardHeader>
               <CardTitle className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Welcome to QueuePilot

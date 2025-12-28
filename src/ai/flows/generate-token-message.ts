@@ -30,7 +30,14 @@ const prompt = ai.definePrompt({
   name: 'generateTokenMessagePrompt',
   input: {schema: GenerateTokenMessageInputSchema},
   output: {schema: GenerateTokenMessageOutputSchema},
-  prompt: `You are a notification system for a queue. Generate a personalized notification message for the user when their token is about to be called. Include the token number and estimated wait time.\n\nToken Number: {{{tokenNumber}}}\nEstimated Wait Time: {{{estimatedWaitTime}}}\n\nMessage:`,
+  prompt: `You are a notification system for a queue. Generate a friendly, concise, and professional message for the user whose token is next. Let them know it's almost their turn.
+  
+  Example: "Your turn is next! Please get ready. Token: {{{tokenNumber}}}. Estimated wait: {{{estimatedWaitTime}}}."
+  
+  Token Number: {{{tokenNumber}}}
+  Estimated Wait Time: {{{estimatedWaitTime}}}
+  
+  Message:`,
 });
 
 const generateTokenMessageFlow = ai.defineFlow(

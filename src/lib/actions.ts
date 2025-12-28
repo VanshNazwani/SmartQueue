@@ -25,7 +25,7 @@ export async function summarizeQueueAction(input: SummarizeQueueDataInput) {
   try {
     const result = await summarizeQueueData(input);
     return result;
-  } catch (error) {
+  } catch (error)
     console.error('Error in summarizeQueueAction:', error);
     return { summary: 'Error generating summary.' };
   }
