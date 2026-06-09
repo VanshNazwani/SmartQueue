@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { QueueProvider } from '@/context/queue-context';
+import { DashboardLayout } from '@/components/layout/dashboard-layout';
 
 export const metadata: Metadata = {
-  title: 'QueuePilot',
-  description: 'Real-Time Token Management System',
+  title: 'SmartQueue 2.0',
+  description: 'Enterprise Queue Management System',
 };
 
 export default function RootLayout({
@@ -23,9 +24,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased min-h-screen">
+      <body className="font-body antialiased min-h-screen bg-slate-50 dark:bg-slate-950">
         <QueueProvider>
-          {children}
+          <DashboardLayout>
+            {children}
+          </DashboardLayout>
           <Toaster />
         </QueueProvider>
       </body>
